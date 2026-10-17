@@ -3,7 +3,7 @@ import ResponseBar from './components/ResponseBar'
 
 const VARIANTS = [
   { id: 'classic', label: 'Classic' },
-  { id: 'glass', label: 'Liquid Glass' },
+  { id: 'glass', label: 'Graphite' },
 ]
 
 function readVariant() {
