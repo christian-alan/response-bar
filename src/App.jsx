@@ -31,7 +31,7 @@ export default function App() {
       className="stage relative grid min-h-full place-items-center overflow-hidden px-4 pb-[env(safe-area-inset-bottom)] pt-[env(safe-area-inset-top)] font-sans"
     >
       <div className="bar-scale">
-        <ResponseBar />
+        <ResponseBar key={variant} />
       </div>
 
       <nav
