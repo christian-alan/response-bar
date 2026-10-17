@@ -10,9 +10,9 @@ A reaction pill that springs open into a reply field, with the **+** button dock
 
 ## Tech stack
 
-- React 18
-- Vite 5
-- Tailwind CSS 3
+- React 19
+- Vite 8
+- Tailwind CSS 4
 - CSS transitions with a spring curve in `linear()`, keyframes and the Web Animations API, no animation library
 - Inline SVG
 

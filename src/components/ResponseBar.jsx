@@ -138,8 +138,8 @@ export default function ResponseBar() {
             if (open) inputRef.current?.focus()
             else setBarOpen(true)
           }}
-          className={`${tapBase} transition-[left,background-color,transform] duration-500 ease-spring ${
-            open ? 'left-2.5 cursor-text !bg-transparent' : 'left-4'
+          className={`${tapBase} transition-[left,background-color,transform,translate,scale,rotate] duration-500 ease-spring ${
+            open ? 'left-2.5 cursor-text bg-transparent!' : 'left-4'
           }`}
         >
           <CommentIcon />
@@ -151,7 +151,7 @@ export default function ResponseBar() {
           aria-expanded={emojiOpen}
           tabIndex={open ? -1 : 0}
           onClick={toggleEmoji}
-          className={`${tapBase} transition-[background-color,transform,opacity,filter] duration-200 ease-pop left-[83px] ${emojiOpen ? 'bg-[var(--hover)]' : ''} ${open ? fadeAway : ''}`}
+          className={`${tapBase} transition-[background-color,transform,opacity,filter,translate,scale,rotate] duration-200 ease-pop left-[83px] ${emojiOpen ? 'bg-[var(--hover)]' : ''} ${open ? fadeAway : ''}`}
         >
           <span ref={smileRef} className="grid">
             <SmileIcon />
@@ -167,8 +167,8 @@ export default function ResponseBar() {
         />
 
         <div
-          className={`absolute left-[69px] top-0 flex h-[72px] w-[196px] items-center transition-[opacity,filter,transform] duration-[450ms] ease-spring ${
-            open ? 'pointer-events-auto opacity-100 blur-none delay-[60ms]' : 'pointer-events-none -translate-x-3.5 opacity-0 blur-[8px]'
+          className={`absolute left-[69px] top-0 flex h-[72px] w-[196px] items-center transition-[opacity,filter,transform,translate,scale,rotate] duration-[450ms] ease-spring ${
+            open ? 'pointer-events-auto opacity-100 blur-[0px] delay-[60ms]' : 'pointer-events-none -translate-x-3.5 opacity-0 blur-[8px]'
           }`}
         >
           <label htmlFor="reply" className="sr-only">
@@ -200,18 +200,18 @@ export default function ResponseBar() {
         type="button"
         aria-label={open ? 'Send reply' : 'New'}
         onClick={() => (open ? send() : setBarOpen(true))}
-        className={`primary press absolute grid place-items-center transition-[left,top,width,height,border-radius,transform] duration-[550ms] ease-spring focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[var(--ink)] ${
+        className={`primary press absolute grid place-items-center transition-[left,top,width,height,border-radius,transform,translate,scale,rotate] duration-[550ms] ease-spring focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[var(--ink)] ${
           open ? 'left-[276px] top-1.5 h-[60px] w-[97px] rounded-[30px]' : 'left-[275px] top-0.5 h-[68px] w-[105px] rounded-[34px]'
         }`}
       >
         <PlusIcon
-          className={`col-start-1 row-start-1 h-[30px] w-[30px] transition-[opacity,transform,filter] duration-[380ms] ease-spring ${
+          className={`col-start-1 row-start-1 h-[30px] w-[30px] transition-[opacity,transform,filter,translate,scale,rotate] duration-[380ms] ease-spring ${
             open ? 'rotate-45 scale-[.6] opacity-0 blur-[4px]' : ''
           }`}
         />
         <span ref={planeRef} className="col-start-1 row-start-1">
           <PlaneIcon
-            className={`h-[30px] w-[30px] transition-[opacity,transform,filter] duration-[380ms] ease-spring ${
+            className={`h-[30px] w-[30px] transition-[opacity,transform,filter,translate,scale,rotate] duration-[380ms] ease-spring ${
               open ? '' : '-rotate-45 scale-[.6] opacity-0 blur-[4px]'
             }`}
           />

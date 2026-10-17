@@ -39,7 +39,7 @@ export default function HeartButton({ liked, burstKey, onToggle, className = '',
       aria-pressed={liked}
       tabIndex={tabIndex}
       onClick={onToggle}
-      className={`press absolute top-1.5 grid h-[60px] w-[60px] place-items-center overflow-visible rounded-full transition-[background-color,transform,opacity,filter] duration-200 ease-pop hover:bg-[var(--hover)] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[var(--ink)] ${className}`}
+      className={`press absolute top-1.5 grid h-[60px] w-[60px] place-items-center overflow-visible rounded-full transition-[background-color,transform,opacity,filter,translate,scale,rotate] duration-200 ease-pop hover:bg-[var(--hover)] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[var(--ink)] ${className}`}
     >
       {liked && burstKey > 0 && <Burst key={burstKey} />}
       <HeartIcon key={liked ? `on-${burstKey}` : 'off'} filled={liked} className={liked && burstKey > 0 ? 'heart-pop' : ''} />
